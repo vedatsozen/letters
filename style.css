@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+body {
+    text-align: center;
+    padding: 0px;
+    margin: auto;
+}
+
+* {
+    font-family: "Reddit Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:400;
+    font-style: normal;
+    box-sizing: border-box;
+  }
+
+#harflerdiv {
+    margin: auto;
+    margin-top: 50px;
+    height: fit-content;
+    width:90%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2px;
+}
+
+.yeniharf {
+    margin: auto;
+    font-size:15px;
+    display: block;
+    background-color: orangered;
+    color: white;
+    height:50px;
+    width:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.yeniharf:hover {
+    background-color: forestgreen;
+}
+
+.yeniharf:active {
+    transform: scale(0.95);
+}
+
+#kelimeh1 {
+    margin: auto;
+    margin-top: 20px;
+    height: fit-content;
+    width:90%;
+    min-height: 50px;
+    padding: 5px;
+    box-shadow: 0 0 20px black;
+    border-radius: 5px;
+}
+
+.kelimeh1 {
+    font-size: 100px;
+    color: orangered;
+}
+
+i.backspace {
+    display: block;
+    font-size: 3rem;
+    margin: auto;
+    margin-top:40px !important;
+    cursor: pointer;
+    color: orangered;
+}
+
+i.backspace:active {
+    transform: scale(0.9);
+}
+
+div.spacebar {
+    height: 40px;
+    width: 300px;
+    background-color: grey;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    background-color: orangered;
+}
+
+div.spacebar:active {
+    transform:translate(-50%) translateY(5px);
+}
+
+
+
+#icons {
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITE 44</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+<div id="harflerdiv"></div>
+
+<i class="backspace bi bi-backspace-fill"></i>
+
+<h1 id="kelimeh1"></h1>
+
+<div class="spacebar"></div>
+
+<script>
+
+let harfler = [
+    "A","B","C","Ç","D","E","F","G","Ğ","H","I","İ","J","K","L","M","N","O","Ö","P","Q","R","S","Ş","T","U","Ü","V","Y","Z"
+    ];
+
+let kelime = [];
+
+let harflerdiv = document.getElementById("harflerdiv");
+
+for ( let i = 0; i < harfler.length; i++) {
+
+let yeniHarf = document.createElement("h1");
+yeniHarf.classList.add("yeniharf");
+yeniHarf.innerHTML = harfler[i];
+harflerdiv.appendChild(yeniHarf);
+
+}
+
+$(document).ready(function() {
+
+$(".yeniharf").click(function() {
+
+let yeniharf = $(this).text();
+
+let kelimeh1 = document.getElementById("kelimeh1");
+kelimeh1.classList.add("kelimeh1");
+
+kelime.push(yeniharf);
+
+kelimeh1.innerHTML = kelime.join("");
+
+})
+
+$(".spacebar").click(function() {
+
+let bosluk = " ";
+
+let kelimeh1 = document.getElementById("kelimeh1");
+kelimeh1.classList.add("kelimeh1");
+
+kelime.push(bosluk);
+
+kelimeh1.innerHTML = kelime.join("");
+
+})
+
+$(".backspace").click(function() {
+
+let yeniharf = $(this).text();
+
+let kelimeh1 = document.getElementById("kelimeh1");
+
+kelimeh1.classList.add("kelimeh1");
+
+kelime.pop(yeniharf);
+
+kelimeh1.innerHTML = kelime.join("");
+
+})
+
+
+
+})
+</script>
+</body>
+</html>
